@@ -13,7 +13,7 @@ This code showcases a basic approach to creating a grid of objects in Unity, sim
 
 Private and public variables that keep track of the camera's position and where objects are placed and recycled.
 
-<details open> 
+<details> 
 <summary>Click to expand</summary>
   
     public class MapGenerator : MonoBehaviour
@@ -35,7 +35,7 @@ Private and public variables that keep track of the camera's position and where 
 
 During start, it captures the camera's position and sets where objects should first appear. Then, it calls GenerateInitialObjects() to create the initial set of objects.
 
-<details open> 
+<details> 
 <summary>Click to expand</summary>
   
     private void Start()
@@ -51,7 +51,7 @@ During start, it captures the camera's position and sets where objects should fi
   
 During update, it checks if the camera has moved enough to recycle objects. If it has, RecycleRow() moves the bottom row to the top, creating an endless scrolling effect.
 
-<details open> 
+<details> 
 <summary>Click to expand</summary>
   
     private void Update()
@@ -72,7 +72,7 @@ It calculates the offsets (xOffset and yOffset) to center the objects on the scr
 It loops through the grid dimensions (width and height) and places objects based on their calculated positions using the spacing and offsets.
 The objects are created using InstantiateRandomObject and added to the generatedObjects list.
 
-<details open> 
+<details> 
 <summary>Click to expand</summary>
   
     void GenerateInitialObjects()
@@ -101,7 +101,7 @@ This method moves the bottom row of objects to the top of the grid.
 It removes the first row from generatedObjects, updates its Y-position, and repositions all objects in the row to their new positions at the top of the grid.
 After moving the row, it is added back to the end of the generatedObjects list and lastGeneratedY is updated to keep track of the new top row's position.
 
-<details open> 
+<details> 
 <summary>Click to expand</summary>
   
     void RecycleRow()
@@ -127,7 +127,7 @@ After moving the row, it is added back to the end of the generatedObjects list a
 This method instantiates a random object from the environmentObjects array.
 It uses Random.Range to select a random index and creates the object at the given position with a default rotation.
 
-<details open> 
+<details> 
 <summary>Click to expand</summary>
   
     GameObject InstantiateRandomObject(Vector3 position)
