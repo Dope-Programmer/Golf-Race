@@ -9,7 +9,7 @@ This code showcases a basic approach to creating a grid of objects in Unity, sim
 
 ![MapGenerator-ezgif com-optimize](https://github.com/user-attachments/assets/62875736-7512-4e54-b7e4-4efc36f2edb8)
 
-## 1.Class Setup: Map Generator.
+## 1. Class Setup: Map Generator.
 
 Private and public variables that keep track of the camera's position and where objects are placed and recycled.
 
@@ -31,7 +31,7 @@ Private and public variables that keep track of the camera's position and where 
     }
    </details> 
 
-## 2.Start Method: Initializing the Map.
+## 2. Start Method: Initializing the Map.
 
 During start, it captures the camera's position and sets where objects should first appear. Then, it calls GenerateInitialObjects() to create the initial set of objects.
 
@@ -47,7 +47,7 @@ During start, it captures the camera's position and sets where objects should fi
     }
   </details> 
   
-## 3.Update Method: Checking for Recycling.
+## 3. Update Method: Checking for Recycling.
   
 During update, it checks if the camera has moved enough to recycle objects. If it has, RecycleRow() moves the bottom row to the top, creating an endless scrolling effect.
 
@@ -65,7 +65,7 @@ During update, it checks if the camera has moved enough to recycle objects. If i
     }
    </details> 
 
-## 4.Generating the Grid: Creating the Map.
+## 4. Generating the Grid: Creating the Map.
   
 This method generates the initial grid of objects.
 It calculates the offsets (xOffset and yOffset) to center the objects on the screen.
@@ -95,7 +95,7 @@ The objects are created using InstantiateRandomObject and added to the generated
 
 </details> 
 
-## 5.Recycling Rows: Keeping the Map Moving.
+## 5. Recycling Rows: Keeping the Map Moving.
 
 This method moves the bottom row of objects to the top of the grid.
 It removes the first row from generatedObjects, updates its Y-position, and repositions all objects in the row to their new positions at the top of the grid.
@@ -122,7 +122,7 @@ After moving the row, it is added back to the end of the generatedObjects list a
     }
 </details> 
 
-## 6.Random Object Spawning: Adding Variety.
+## 6. Random Object Spawning: Adding Variety.
 
 This method instantiates a random object from the environmentObjects array.
 It uses Random.Range to select a random index and creates the object at the given position with a default rotation.
