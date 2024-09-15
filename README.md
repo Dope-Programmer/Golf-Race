@@ -137,7 +137,7 @@ It uses Random.Range to select a random index and creates the object at the give
     }
 </details> 
 
-### Gameplay and controls
+# Gameplay and controls
 
 ## Steering wheel   
 
