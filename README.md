@@ -4,7 +4,7 @@
 
 This is a basic, endless golf game made for Android, where players keep playing as long as they can without losing all their lives. It was my first time using Firebase to add a sign-up and login system, making it feel more like an app. The game also features my first attempt at implementing touch controls: one finger drives the car, while the other swipes the golf balls into the holes. It saves and compares the top three high scores and playtimes, as well as the player's own stats. Even though it's a simple game, it was fun to create and taught me a lot about mobile development and working with backend systems.
 
-## My role
+## Code example: Map generator.
 This code showcases a basic approach to creating a grid of objects in Unity, similar to a tilemap. I try to dynamically generate and recycle objects in a grid pattern based on the cameras movement. 
 
 ![MapGenerator-ezgif com-optimize](https://github.com/user-attachments/assets/62875736-7512-4e54-b7e4-4efc36f2edb8)
@@ -139,7 +139,22 @@ It uses Random.Range to select a random index and creates the object at the give
 
 ### Gameplay
 
-## Steering wheel                                                                                            
+## Steering wheel   
+Explination: 
+
 ![Gameplay1 gif-optimerad](https://github.com/user-attachments/assets/52ae0eb3-979d-454d-b2b2-fab377a644cf) 
 ## Swipe
+Explination: 
+
 ![Gameplay2-gif-optimerad](https://github.com/user-attachments/assets/a1dd1bba-5e59-4916-8f2a-4624b93798a2)
+
+## Other
+
+<img width="650" alt="intro" src="https://github.com/user-attachments/assets/f3c13c16-847a-4c62-a3a2-8fd7a2c60ed6">
+<img width="657" alt="log in" src="https://github.com/user-attachments/assets/f917356b-f91b-4aa3-941a-945acc903f49">
+<img width="653" alt="sign up" src="https://github.com/user-attachments/assets/0f569484-da8e-42c2-905e-c1f543c35edd">
+<img width="656" alt="play" src="https://github.com/user-attachments/assets/cea55242-48ef-4981-84ff-fc2d619a602b">
+<img width="636" alt="game over" src="https://github.com/user-attachments/assets/46ea5ac1-ed6d-48cf-b07b-d302d2377bd7">
+
+
+
