@@ -136,4 +136,8 @@ It uses Random.Range to select a random index and creates the object at the give
      return Instantiate(environmentObjects[randomIndex], position, Quaternion.identity);
     }
 </details> 
-  
+
+  ### Gameplay
+
+# Steering wheel                                                                                            # Swipe
+![Gameplay1 gif-optimerad](https://github.com/user-attachments/assets/52ae0eb3-979d-454d-b2b2-fab377a644cf) ![Gameplay2-gif-optimerad](https://github.com/user-attachments/assets/a1dd1bba-5e59-4916-8f2a-4624b93798a2)
