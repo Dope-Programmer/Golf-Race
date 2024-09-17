@@ -15,21 +15,23 @@ Private and public variables that keep track of the camera's position and where 
 
 <details> 
 <summary>Click to expand</summary>
-  
-    public class MapGenerator : MonoBehaviour
-    {
+
+```csharp
+public class MapGenerator : MonoBehaviour
+{
     public GameObject[] environmentObjects;
     public int width;
     public int height;
     public float spacing = 2f;
     public float generationSpeed;
     public float destructionSpeed;
+
     private List<List<GameObject>> generatedObjects = new List<List<GameObject>>();
     private Transform cameraTransform;
     private float lastGeneratedY;
-    private float initialYPosition; 
-    }
-   </details> 
+    private float initialYPosition;
+```
+ </details> 
 
 ## 2. Start Method: Initializing the Map.
 
@@ -37,14 +39,18 @@ During start, it captures the camera's position and sets where objects should fi
 
 <details> 
 <summary>Click to expand</summary>
-  
-    private void Start()
-    {
-     cameraTransform = Camera.main.transform;
-     initialYPosition = cameraTransform.position.y - (Camera.main.orthographicSize * 2);
-     lastGeneratedY = initialYPosition;
-     GenerateInitialObjects(); // Generate objects with the correct start position
-    }
+
+  ```csharp
+private void Start()
+{
+    cameraTransform = Camera.main.transform;
+
+    initialYPosition = cameraTransform.position.y - (Camera.main.orthographicSize * 2);
+    lastGeneratedY = initialYPosition;
+
+    GenerateInitialObjects(); 
+}
+```
   </details> 
   
 ## 3. Update Method: Checking for Recycling.
@@ -53,17 +59,19 @@ During update, it checks if the camera has moved enough to recycle objects. If i
 
 <details> 
 <summary>Click to expand</summary>
-  
-    private void Update()
+
+  ```csharp
+private void Update()
+{
+    float distanceToRecycle = 15f; 
+
+    if (cameraTransform.position.y > lastGeneratedY - distanceToRecycle)
     {
-     float distanceToRecycle = 15f; // The distance from the camera where rows should be recycled
-  
-     if (cameraTransform.position.y > lastGeneratedY - distanceToRecycle)
-     {
-        RecycleRow(); // Move the bottom row to the top
-     }
+        RecycleRow();
     }
-   </details> 
+}
+```
+ </details> 
 
 ## 4. Generating the Grid: Creating the Map.
   
@@ -74,14 +82,15 @@ The objects are created using InstantiateRandomObject and added to the generated
 
 <details> 
 <summary>Click to expand</summary>
-  
-    void GenerateInitialObjects()
-    {
-      float xOffset = (width - 1) * spacing / 2;
-      float yOffset = (height - 1) * spacing / 2;
 
-      for (int y = 0; y < height; y++)
-      {
+  ```csharp
+void GenerateInitialObjects()
+{
+    float xOffset = (width - 1) * spacing / 2;
+    float yOffset = (height - 1) * spacing / 2;
+
+    for (int y = 0; y < height; y++)
+    {
         generatedObjects.Add(new List<GameObject>());
 
         for (int x = 0; x < width; x++)
@@ -90,9 +99,9 @@ The objects are created using InstantiateRandomObject and added to the generated
             GameObject obj = InstantiateRandomObject(position);
             generatedObjects[y].Add(obj);
         }
-      }
     }
-
+}
+```
 </details> 
 
 ## 5. Recycling Rows: Keeping the Map Moving.
@@ -103,23 +112,26 @@ After moving the row, it is added back to the end of the generatedObjects list a
 
 <details> 
 <summary>Click to expand</summary>
-  
-    void RecycleRow()
+
+  ```csharp
+void RecycleRow()
+{
+    List<GameObject> rowToRecycle = generatedObjects[0];
+    generatedObjects.RemoveAt(0); 
+
+    float xOffset = (width - 1) * spacing / 2;
+    float newY = lastGeneratedY + spacing; 
+
+    for (int x = 0; x < rowToRecycle.Count; x++)
     {
-     List<GameObject> rowToRecycle = generatedObjects[0];
-     generatedObjects.RemoveAt(0); // Remove it from the list
-
-     float xOffset = (width - 1) * spacing / 2;
-     float newY = lastGeneratedY + spacing; // New Y-position for the recycled row
-
-     for (int x = 0; x < rowToRecycle.Count; x++)
-     {
         GameObject obj = rowToRecycle[x];
         obj.transform.position = new Vector3(x * spacing - xOffset, newY, 0);
-     }
-     generatedObjects.Add(rowToRecycle);
-     lastGeneratedY += spacing;
     }
+
+    generatedObjects.Add(rowToRecycle);
+    lastGeneratedY += spacing;
+}
+```
 </details> 
 
 ## 6. Random Object Spawning: Adding Variety.
@@ -129,19 +141,21 @@ It uses Random.Range to select a random index and creates the object at the give
 
 <details> 
 <summary>Click to expand</summary>
-  
-    GameObject InstantiateRandomObject(Vector3 position)
-    {
-     int randomIndex = Random.Range(0, environmentObjects.Length);
-     return Instantiate(environmentObjects[randomIndex], position, Quaternion.identity);
-    }
+
+  ```csharp
+GameObject InstantiateRandomObject(Vector3 position)
+{
+    int randomIndex = Random.Range(0, environmentObjects.Length);
+    return Instantiate(environmentObjects[randomIndex], position, Quaternion.identity);
+}
+```
 </details> 
 
 # Gameplay and controls
 
 ## Steering wheel   
 
-The steering of the car is through a joystick script.
+The steering of the car is controlled through a joystick script.
 
 ![Gameplay1 gif-optimerad](https://github.com/user-attachments/assets/52ae0eb3-979d-454d-b2b2-fab377a644cf) 
 ## Swipe
