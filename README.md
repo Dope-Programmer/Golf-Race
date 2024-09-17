@@ -30,6 +30,7 @@ public class MapGenerator : MonoBehaviour
     private Transform cameraTransform;
     private float lastGeneratedY;
     private float initialYPosition;
+}
 ```
  </details> 
 
