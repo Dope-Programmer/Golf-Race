@@ -1,8 +1,7 @@
 # Golf Mobile Game - WIP.
+This is a basic, endless golf game made for Android, where players keep playing as long as they can without losing all their lives. It was my first time using Firebase to add a sign-up and login system, making it feel more like an app. The game also features my first attempt at implementing touch controls: one finger drives the car, while the other swipes the golf balls into the holes. It saves and compares the top three high scores and playtimes, as well as the player's own stats. Even though it's a simple game, it was fun to create and taught me a lot about mobile development and working with backend systems.
 
 <img width="697" alt="Golf race omslag" src="https://github.com/user-attachments/assets/65015332-1823-4e58-a663-5dd1f848398e">
-
-This is a basic, endless golf game made for Android, where players keep playing as long as they can without losing all their lives. It was my first time using Firebase to add a sign-up and login system, making it feel more like an app. The game also features my first attempt at implementing touch controls: one finger drives the car, while the other swipes the golf balls into the holes. It saves and compares the top three high scores and playtimes, as well as the player's own stats. Even though it's a simple game, it was fun to create and taught me a lot about mobile development and working with backend systems.
 
 ## Code example: Map generator.
 This code showcases a basic approach to creating a grid of objects in Unity, similar to a tilemap. I try to dynamically generate and recycle objects in a grid pattern based on the cameras movement. 
