@@ -171,6 +171,8 @@ The swipe controls are through a custom made script.
 <img width="653" alt="sign up" src="https://github.com/user-attachments/assets/0f569484-da8e-42c2-905e-c1f543c35edd">
 <img width="656" alt="play" src="https://github.com/user-attachments/assets/cea55242-48ef-4981-84ff-fc2d619a602b">
 
+### Scoreboard
+
 I was undecided on how to determine the top three players — whether it should be based on the highest score with the shortest time or simply the lowest score and time, as is typical in golf. As of now, I did the latter approach.
 <img width="636" alt="game over" src="https://github.com/user-attachments/assets/46ea5ac1-ed6d-48cf-b07b-d302d2377bd7">
 
