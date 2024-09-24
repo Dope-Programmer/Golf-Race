@@ -167,8 +167,6 @@ The swipe controls are through a custom made script.
 ## Other
 
 <img width="650" alt="intro" src="https://github.com/user-attachments/assets/f3c13c16-847a-4c62-a3a2-8fd7a2c60ed6">
-<img width="657" alt="log in" src="https://github.com/user-attachments/assets/f917356b-f91b-4aa3-941a-945acc903f49">
-<img width="653" alt="sign up" src="https://github.com/user-attachments/assets/0f569484-da8e-42c2-905e-c1f543c35edd">
 <img width="656" alt="play" src="https://github.com/user-attachments/assets/cea55242-48ef-4981-84ff-fc2d619a602b">
 
 ### Scoreboard
