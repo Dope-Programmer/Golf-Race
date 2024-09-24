@@ -153,16 +153,17 @@ GameObject InstantiateRandomObject(Vector3 position)
 
 # Gameplay and controls
 
-## Steering wheel   
-
-The steering of the car is controlled through a joystick script.
-
-![Gameplay1 gif-optimerad](https://github.com/user-attachments/assets/52ae0eb3-979d-454d-b2b2-fab377a644cf) 
 ## Swipe
 
 The swipe controls are through a custom made script.
 
 ![Gameplay2-gif-optimerad](https://github.com/user-attachments/assets/a1dd1bba-5e59-4916-8f2a-4624b93798a2)
+
+## Steering wheel   
+
+The steering of the car is controlled through a joystick script.
+
+![Gameplay1 gif-optimerad](https://github.com/user-attachments/assets/52ae0eb3-979d-454d-b2b2-fab377a644cf) 
 
 ## Other
 
