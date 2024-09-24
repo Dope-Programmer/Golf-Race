@@ -168,7 +168,7 @@ The steering of the car is controlled through a joystick script.
 ## Other
 
 <img width="650" alt="intro" src="https://github.com/user-attachments/assets/f3c13c16-847a-4c62-a3a2-8fd7a2c60ed6">
-<img width="656" alt="play" src="https://github.com/user-attachments/assets/cea55242-48ef-4981-84ff-fc2d619a602b">
+<img width="660" alt="play" src="https://github.com/user-attachments/assets/cea55242-48ef-4981-84ff-fc2d619a602b">
 
 ### Scoreboard
 I was undecided on how to determine the top three players — whether it should be based on the highest score with the shortest time or simply the lowest score and time, as is typical in golf. As of now, I did the latter approach.
