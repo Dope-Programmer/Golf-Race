@@ -12,9 +12,6 @@ This code showcases a basic approach to creating a grid of objects in Unity, sim
 
 Private and public variables that keep track of the camera's position and where objects are placed and recycled.
 
-<details> 
-<summary>Click to expand</summary>
-
 ```csharp
 public class MapGenerator : MonoBehaviour
 {
@@ -31,14 +28,10 @@ public class MapGenerator : MonoBehaviour
     private float initialYPosition;
 }
 ```
- </details> 
 
 ## 2. Start Method: Initializing the Map.
 
 During start, it captures the camera's position and sets where objects should first appear. Then, it calls GenerateInitialObjects() to create the initial set of objects.
-
-<details> 
-<summary>Click to expand</summary>
 
   ```csharp
 private void Start()
@@ -51,14 +44,10 @@ private void Start()
     GenerateInitialObjects(); 
 }
 ```
-  </details> 
   
 ## 3. Update Method: Checking for Recycling.
   
 During update, it checks if the camera has moved enough to recycle objects. If it has, RecycleRow() moves the bottom row to the top, creating an endless scrolling effect.
-
-<details> 
-<summary>Click to expand</summary>
 
   ```csharp
 private void Update()
@@ -71,7 +60,6 @@ private void Update()
     }
 }
 ```
- </details> 
 
 ## 4. Generating the Grid: Creating the Map.
   
@@ -79,9 +67,6 @@ This method generates the initial grid of objects.
 It calculates the offsets (xOffset and yOffset) to center the objects on the screen.
 It loops through the grid dimensions (width and height) and places objects based on their calculated positions using the spacing and offsets.
 The objects are created using InstantiateRandomObject and added to the generatedObjects list.
-
-<details> 
-<summary>Click to expand</summary>
 
   ```csharp
 void GenerateInitialObjects()
@@ -102,16 +87,12 @@ void GenerateInitialObjects()
     }
 }
 ```
-</details> 
 
 ## 5. Recycling Rows: Keeping the Map Moving.
 
 This method moves the bottom row of objects to the top of the grid.
 It removes the first row from generatedObjects, updates its Y-position, and repositions all objects in the row to their new positions at the top of the grid.
 After moving the row, it is added back to the end of the generatedObjects list and lastGeneratedY is updated to keep track of the new top row's position.
-
-<details> 
-<summary>Click to expand</summary>
 
   ```csharp
 void RecycleRow()
@@ -132,15 +113,11 @@ void RecycleRow()
     lastGeneratedY += spacing;
 }
 ```
-</details> 
 
 ## 6. Random Object Spawning: Adding Variety.
 
 This method instantiates a random object from the environmentObjects array.
 It uses Random.Range to select a random index and creates the object at the given position with a default rotation.
-
-<details> 
-<summary>Click to expand</summary>
 
   ```csharp
 GameObject InstantiateRandomObject(Vector3 position)
@@ -149,7 +126,6 @@ GameObject InstantiateRandomObject(Vector3 position)
     return Instantiate(environmentObjects[randomIndex], position, Quaternion.identity);
 }
 ```
-</details> 
 
 # Gameplay and controls
 
